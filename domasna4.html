@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#input").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#table tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #d2e793}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(224, 245, 226);
+    padding: 5px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(224, 245, 226);
+    padding: 5px;
+}
+#input{
+    background-color: rgb(224, 245, 226);
+}
+body{
+    background-image: url(animals.jpg);
+    background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<h1>Animals</h1>
+<h3>Here are some interesting facts about animals</h3>
+<p>Тype an animal and see the informations about it, such as average lifespan, habitat, diet and average size, or you can type the information.</p>  
+<input id="input" type="text" placeholder="Search...">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Animal</th>
+    <th>Average Lifespan</th>
+    <th>Habitat</th>
+    <th>Diet</th>
+    <th>Average Size</th>
+  </tr>
+  </thead>
+  <tbody id="table">
+  <tr>
+    <td>Gorilla</td>
+    <td>35 years</td>
+    <td>Rainforest</td>
+    <td>Herbivorous</td>
+    <td>90-120cm tall, 140-180 kg</td>
+  </tr>
+  <tr>
+    <td>Penguin</td>
+    <td>15-20 years</td>
+    <td>Cold climates(Antarctica, Arctic)</td>
+    <td>Fish, krill, squid</td>
+    <td>30-60cm tall, 1-40 kg</td>
+  </tr>
+  <tr>
+    <td>Elephant</td>
+    <td>60-70 years</td>
+    <td>Grasslands, forests, deserts</td>
+    <td>Herbivorous</td>
+    <td>300-400cm tall, 5-7 tons</td>
+  </tr>
+  <tr>
+    <td>Shark</td>
+    <td>20-30 years</td>
+    <td>Ocean</td>
+    <td>Carnivorous</td>
+    <td>Varies by species (15cm, to over 12m)</td>
+  </tr>
+  <tr>
+    <td>Galapagos tortoise</td>
+    <td>100-150 years</td>
+    <td>Galapagos Islands</td>
+    <td>Herbivorous</td>
+    <td>60-150cm long, 90-230 kg</td>
+  </tr>
+  <tr>
+    <td>Lion</td>
+    <td>10-14 years in the wild,up to 20 years in captivity</td>
+    <td>Africa</td>
+    <td>Carnivorous</td>
+    <td>Male: 113-250 kg, Female: 68-160kg</td>
+  </tr>
+  <tr>
+    <td>Panda</td>
+    <td>20-30 years in the wild</td>
+    <td>Chian</td>
+    <td>Herbivorous(bamboo)</td>
+    <td>Male: 100-150 kg, Female: 90-140kg</td>
+  </tr>
+  <tr>
+    <td>Polar Bear</td>
+    <td>15-18 years</td>
+    <td>Arctic</td>
+    <td>Herbivorous</td>
+    <td>Male: 350-540 kg, Female: 150-250kg</td>
+  </tr>
+  <tr>
+    <td>Cheetah</td>
+    <td>10-12 years</td>
+    <td>Africa, Middle East Carnivore</td>
+    <td>Carnivorous</td>
+    <td>Male: 32-54 kg, Female: 30-54kg</td>
+  </tr>
+  <tr>
+    <td>Koala</td>
+    <td>8-12 years</td>
+    <td>Australia</td>
+    <td>Herbivorous</td>
+    <td>Male: 6-15 kg, Female: 5-10kg</td>
+  </tr>
+  <tr>
+    <td>Wolf</td>
+    <td>6-8 years</td>
+    <td>Worldwide</td>
+    <td>Carnivorous</td>
+    <td>1.5-2 meters</td>
+  </tr> 
+  <tr>
+    <td>Blue whale</td>
+    <td>80-90 years</td>
+    <td>Ocean and Sea</td>
+    <td>Carnivorous</td>
+    <td>25-30 meters</td>
+  </tr>
+  <tr>
+    <td>Ocelot</td>
+    <td>12-15 years</td>
+    <td>Central, South America</td>
+    <td>Carnivorous</td>
+    <td>0.7-1.5 meters</td>
+  </tr>
+  <tr>
+    <td>Giant squid</td>
+    <td>3-5 years</td>
+    <td>Ocean and sea</td>
+    <td>Carnivorous</td>
+    <td>10-18 meters</td>
+  </tr> 
+  <tr>
+    <td>Jaguar</td>
+    <td>12-15 years</td>
+    <td>Central, South America</td>
+    <td>Carnivorous</td>
+    <td>1.2-1.7 meters</td>
+  </tr>
+  <tr>
+    <td>Puma</td>
+    <td>8-13 years</td>
+    <td>Central, South America</td>
+    <td>Carnivorous</td>
+    <td>1-1.5 meters</td>
+  </tr>
+  <tr>
+    <td>Tiger</td>
+    <td>15 years</td>
+    <td>Forests, grasslands</td>
+    <td>Carnivorous</td>
+    <td>2.5-3.5 meters long, 0.9-1.1 meters tall</td>
+  </tr>
+  </tbody>
+ </table>
+</body>
+</html>
